@@ -1,10 +1,17 @@
 import requests
+import os
+from dotenv import load_dotenv
 
-PLAID_CLIENT_ID = "your_client_id"
-PLAID_SECRET = "your_secret"
-PLAID_ACCESS_TOKEN = "your_access_token"
+# Load environment variables from .env file
+env_path = "/Users/sarabenedict/quickstart/.env"
+load_dotenv(env_path)
 
-url = "https://sandbox.plaid.com/transactions/get"
+# Retrieve values from the .env file
+PLAID_CLIENT_ID = os.getenv("PLAID_CLIENT_ID")
+PLAID_SECRET = os.getenv("PLAID_SECRET")
+PLAID_ACCESS_TOKEN = os.getenv("PLAID_ACCESS_TOKEN")
+
+url = "https://sandbox.plaid.com/transactions/sync"
 headers = {"Content-Type": "application/json"}
 payload = {
     "client_id": PLAID_CLIENT_ID,
