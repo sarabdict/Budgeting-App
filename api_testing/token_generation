@@ -1,0 +1,36 @@
+from plaid import Configuration, ApiClient
+from plaid.api import plaid_api
+from plaid.model.link_token_create_request import LinkTokenCreateRequest
+from plaid.model.products import Products
+from plaid.model.country_code import CountryCode
+
+import os
+from dotenv import load_dotenv
+
+#get info from .env file
+env_path =  "/Users/sarabenedict/quickstart/.env"
+load_dotenv(env_path)
+PLAID_CLIENT_ID = os.getenv("PLAID_CLIENT_ID")
+PLAID_SECRET = os.getenv("PLAID_SECRET")
+
+# Initialize the Plaid client
+configuration = plaid.Configuration(
+    host=plaid.Environment.Sandbox,
+    api_key={
+        'clientId': PLAID_CLIENT_ID,
+        'secret': PLAID_SECRET,
+    }
+)
+api_client = plaid.ApiClient(configuration)
+client = plaid_api.PlaidApi(api_client)
+
+# Create a link token
+link_token_request = LinkTokenCreateRequest(
+    products=[Products('transactions')],
+    client_name='Your App Name',
+    country_codes=[CountryCode('US')],
+    language='en',
+    user={'client_user_id': 'unique_user_id'}
+)
+link_token_response = client.link_token_create(link_token_request)
+link_token = link_token_response['link_token']
