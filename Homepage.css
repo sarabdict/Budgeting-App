@@ -1,0 +1,101 @@
+body {
+    font-family: Noto Sans;
+    font-color: black;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: flex;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 2fr;
+    gap: 5px;
+    padding: 20px;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 20px;
+}
+.sidebar {
+  width: 250px;
+    background: #333;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    border-right: 1px solid black;
+}
+.sidebar h2 {
+    text-align: center;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+.sidebar ul li:hover {
+    background: #444;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.balance-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.balance {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.chart-container {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.transactions {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #218838;
+}
+@media (max-width: 480px) {
+    #resetButton,#heartButton {
+        background-color: black;
+        color: white;
+        font-size: 0.9rem;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        margin-right: 2px;
+        margin-left: 5px;
+    }
+}
