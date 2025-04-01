@@ -23,7 +23,7 @@ To get a local copy up and running follow these simple steps:
 cd Budgeting-App
 
    ```bash
-   git clone https://github.com/rivkagribov/Budgeting-App.git
+   git clone https://github.com/sarabdict/Budgeting-App.git
 cd Budgeting-App
 Open the index.html file in your web browser to start using the budgeting app.
 Usage
