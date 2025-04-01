@@ -1,6 +1,6 @@
 body {
-    font-family: Noto Sans;
-    font-color: black;
+    font-family: 'Noto Sans', sans-serif;
+    color: black;
     font-size: 24px;
     margin: 0;
     padding: 0;
@@ -59,7 +59,7 @@ Additional styling for better appearance
     width: 250px;
     max-width: 300px;
     background: grey;
-    color: grey;
+    color: white;
     padding: 20px;
     height: 100vh;
     border-right: 1px solid black;
@@ -79,6 +79,7 @@ Additional styling for better appearance
 }
 .sidebar ul li:hover {
     background: #444;
+    color: white;
 }
 
 .content {
