@@ -58,7 +58,7 @@ Additional styling for better appearance
 .sidebar {
     width: 250px;
     max-width: 300px;
-    background: light purple;
+    background: grey;
     color: white;
     padding: 20px;
     height: 100vh;
