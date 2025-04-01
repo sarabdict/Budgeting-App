@@ -10,10 +10,8 @@
 </head>
 <body>
     <div class="container">
-        <aside class="sidebar">
-            <h2>Budget Tracker</h2>
-            <button id="settingsButton">Settings</button>
-            <button id="heartButton">❤️</button>
+        <div class="sidebar">
+        <div class="right-sidebar">
             <nav>
                 <ul>
                     <li>Dashboard</li
@@ -25,8 +23,9 @@
                     <li>(Enter More or Less);</li>
                 </ul>
             </nav>
-        </aside>
-        <main class="content">
+    </div>
+        <div class="center-content">
+            <div class="content">
             <header>
                 <h1>Hey There, Gurllll</h1>
             </header>
@@ -46,6 +45,22 @@
             </section>
         </main>
     </div>
+ </div>
+     <div class="right-sidebar">
+          <div class="content">
+              <header>
+                  <h1>First and Last Name Here</h1>
+              </header> 
+           <section class="chart-container">
+                  <h2>Expense Donut</h2>
+              <canvas id="spendingChart"></canvas>
+           </section>
+           <section class="chart-container">
+                  <h2>Savings Donut</h2>
+              <canvas id="savingChart"></canvas>
+           </section>
+    </div>
+</div>
     <script src="homepage.js"></script>
 </body>
 </html>
