@@ -4,8 +4,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const addExpenseButton = document.getElementById("add-expense");
     const transactionList = document.getElementById("transaction-list");
     const settingsButton = document.getElementById("settingsButton");
+    //const charttransitionButton = document.getElementById("charttransitionButton"); add flip chart button
+    
     let balance = 500;
+    const updateBalance = () => {
+        balanceElement.textContent = `$${balance.toFixed(2)}`;
+    };
 
+        const addTransaction = (type, amount) => {
+        const li = document.createElement("li");
+        li.textContent = `${type}: $${parseFloat(amount).toFixed(2)}`;
+        transactionList.appendChild(li);
+    };
+    const addTransaction = (type, amount) => {
+        const li = document.createElement("li");
+        li.textContent = `${type}: $${parseFloat(amount).toFixed(2)}`;
+        transactionList.appendChild(li);
+    };
+    
     addIncomeButton.addEventListener("click", function () {
         let amount = prompt("Enter income amount:");
         if (amount) {
@@ -24,15 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    function updateBalance() {
-        balanceElement.textContent = `$${balance}`;
-    }
-
-    function addTransaction(type, amount) {
-        let li = document.createElement("li");
-        li.textContent = `${type}: $${amount}`;
-        transactionList.appendChild(li);
-    }
+    //function updateBalance() {
+     //   balanceElement.textContent = `$${balance}`;
+   // }
 
     const ctx = document.getElementById("spendingChart").getContext("2d");
     new Chart(ctx, {
@@ -55,4 +65,5 @@ settingsButton.addEventListener('click', function() {
 heartButton.addEventListener('click', function() {
         alert('Hi luv');
     });
+    updateBalance();
 });
