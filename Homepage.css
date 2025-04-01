@@ -1,1 +1,46 @@
-
+body, html {
+    height: 100%;
+    margin: 0;
+    background: rgb(50,50,50);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 2fr;
+    gap: 5px;
+    padding: 20px;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 20px;
+}
+.navbar {
+    background-color: black;
+    color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 20px;
+    position: relative;
+}
+h1 {
+    margin: 0px;
+    font-size: 2rem;
+}
+.navbar img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}  
+@media (max-width: 480px) {
+    #resetButton,#heartButton {
+        background-color: black;
+        color: white;
+        font-size: 0.9rem;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        margin-right: 2px;
+        margin-left: 5px;
+    }
+}
