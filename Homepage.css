@@ -6,16 +6,20 @@ body {
     padding: 0;
     background-color: white;
     display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     grid-template-columns: 1fr 2fr;
     gap: 5px;
     padding: 20px;
     justify-content: center; 
     align-items: center;
     margin-top: 20px;
+  /* width: 100%;
+    height: 100%;*/
 }
 /* Style the dropdown button
 .dropdown-toggle {
@@ -56,7 +60,7 @@ Additional styling for better appearance
 }
  */
 .sidebar {
-    width: 250px;
+    width: 20%;
     max-width: 300px;
     background: grey;
     color: white;
@@ -66,6 +70,31 @@ Additional styling for better appearance
     margin: 0 auto; 
     text-align: center;
 }
+.center-content {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    flex-grow: 1;
+}
+.right-sidebar {
+    width: 20%;
+    max-width: 300px;
+    background: lightgrey;
+    padding: 20px;
+    height: 100vh;
+    border-left: 1px solid black;
+    text-align: center;
+}
+
 .sidebar h2 {
     text-align: center;
 }
@@ -136,12 +165,16 @@ button:hover {
 }
 @media (max-width: 768px) {
     .container {
+        flex-direction: column;
         padding: 10px;
     }
-    .sidebar {
+    .sidebar, .right-sidebar {
         width: 100%;
         max-width: none;
         height: auto;
+    }
+    .center-content {
+        width: 100%;
     }
     .content {
         width: 100%;
