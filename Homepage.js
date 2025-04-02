@@ -4,19 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const addExpenseButton = document.getElementById("add-expense");
     const transactionList = document.getElementById("transaction-list");
     const settingsButton = document.getElementById("settingsButton");
+    const heartButton = document.getElementById("heartButton");
     //const charttransitionButton = document.getElementById("charttransitionButton"); add flip chart button
     
     let balance = 500;
+    
     const updateBalance = () => {
         balanceElement.textContent = `$${balance.toFixed(2)}`;
     };
 
         const addTransaction = (type, amount) => {
-        const li = document.createElement("li");
-        li.textContent = `${type}: $${parseFloat(amount).toFixed(2)}`;
-        transactionList.appendChild(li);
-    };
-    const addTransaction = (type, amount) => {
         const li = document.createElement("li");
         li.textContent = `${type}: $${parseFloat(amount).toFixed(2)}`;
         transactionList.appendChild(li);
@@ -33,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     addExpenseButton.addEventListener("click", function () {
         let amount = prompt("Enter expense amount:");
-        if (amount) {
+        if (amount && !isNaN(amount)) {
             balance -= parseFloat(amount);
             updateBalance();
             addTransaction("Expense", amount);
@@ -59,11 +56,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
   
-settingsButton.addEventListener('click', function() {
-        alert('There should be Setting options here. For example, idea: Light and Dark Mode');
-    });
-heartButton.addEventListener('click', function() {
-        alert('Hi luv');
-    });
+    if (settingsButton) {
+        settingsButton.addEventListener("click", function() {
+            alert("There should be setting options here. For example, Light and Dark Mode.");
+        });
+    }
+
+    if (heartButton) {
+        heartButton.addEventListener("click", function() {
+            alert("Hi luv");
+        });
+    }
+
     updateBalance();
 });
