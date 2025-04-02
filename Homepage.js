@@ -55,18 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }]
         }
     });
-  
-    if (settingsButton) {
-        settingsButton.addEventListener("click", function() {
-            alert("There should be setting options here. For example, Light and Dark Mode.");
-        });
-    }
+document.getElementById("heartButton").addEventListener("click", function () {
+    alert("Hi luv 💖");
+    });
 
-    if (heartButton) {
-        heartButton.addEventListener("click", function() {
-            alert("Hi luv");
-        });
-    }
+document.getElementById("settingsButton").addEventListener("click", function () {
+    alert("Settings menu coming soon! Maybe light & dark mode?");
+    });
+}
 
     updateBalance();
 });
