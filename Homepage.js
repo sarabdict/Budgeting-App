@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const transactionList = document.getElementById("transaction-list");
     const settingsButton = document.getElementById("settingsButton");
     const heartButton = document.getElementById("heartButton");
+    const spendingCtx = document.getElementById("spendingChart").getContext("2d");
+    const spendingCtx2 = document.getElementById("spendingChart2").getContext("2d");
+    const savingCtx = document.getElementById("savingChart").getContext("2d");
+
     //const charttransitionButton = document.getElementById("charttransitionButton"); add flip chart button
     
     let balance = 500;
@@ -41,8 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
      //   balanceElement.textContent = `$${balance}`;
    // }
 
-    const ctx = document.getElementById("spendingChart").getContext("2d");
-    new Chart(ctx, {
+    new Chart(spendingCtx, {
         type: "line",
         data: {
             labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
@@ -55,6 +58,27 @@ document.addEventListener("DOMContentLoaded", function () {
             }]
         }
     });
+        new Chart(spendingCtx2, {
+        type: "doughnut",
+        data: {
+            labels: ["Rent", "Gas"],
+            datasets: [{
+                data: [30, 70],
+                backgroundColor: "rgba(75, 192)"
+            }]
+        }
+    });
+        new Chart(savingCtx, {
+        type: "doughnut",
+        data: {
+            labels: ["Saved", "Spent"],
+            datasets: [{
+                data: [30, 70],
+                backgroundColor: "rgba(75, 192)"
+            }]
+        }
+    });
+    
 document.getElementById("heartButton").addEventListener("click", function () {
     alert("Hi luv 💖");
     });
