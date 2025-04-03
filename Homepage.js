@@ -10,38 +10,59 @@ document.addEventListener("DOMContentLoaded", function () {
     const savingCtx = document.getElementById("savingChart").getContext("2d");
 
 function changePage(page) {
-    let content = document.getElementById("content");
+    const content = document.querySelector(".center-content .content");
 
     // Change content based on clicked button
     switch (page) {
         case "dashboard":
-            content.innerHTML = "<h1>Dashboard</h1><p>Welcome to your budget dashboard.</p>";
-            break;
+                content.innerHTML = `<header><h1>Dashboard</h1></header>
+                    <section class="balance-card">
+                        <h2>Current Balance</h2>
+                        <p class="balance" id="balance">$500</p>
+                        <button id="add-income">+ Income</button>
+                        <button id="add-expense">- Expense</button>
+                        </section>
+                    <section class="chart-container">
+                        <h2>Spending Overview</h2>
+                        <canvas id="spendingChart"></canvas>
+                </section>`;
+                break;
         case "subscriptions":
-            content.innerHTML = "<h1>Subscriptions</h1><p>Track your monthly subscriptions here.</p>";
-            break;
+                content.innerHTML = `<header><h1>Subscriptions</h1></header>
+                    <p>List of all your subscriptions goes here...</p>`;
+                break;
+
         case "saving-goals":
-            content.innerHTML = "<h1>Saving Goals</h1><p>Set and track your saving goals here.</p>";
-            break;
+                content.innerHTML = `<header><h1>Saving Goals</h1></header>
+                    <p>Define your saving goals here...</p>`;
+                break;
+
         case "expense-tracker":
-            content.innerHTML = "<h1>Expense Tracker</h1><p>Log your expenses and see trends.</p>";
-            break;
+                content.innerHTML = `<header><h1>Expense Tracker</h1></header>
+                    <p>Track your expenses here...</p>`;
+                break;
         case "accounts":
-            content.innerHTML = "<h1>Accounts</h1><p>Manage your financial accounts.</p>";
-            break;
+                content.innerHTML = `<header><h1>Accounts</h1></header>
+                    <p>Manage your accounts here...</p>`;
+                break;
         case "settings":
-            content.innerHTML = "<h1>Settings</h1><p>Customize your app settings here.</p>";
-            break;
+               content.innerHTML = `<header><h1>Settings</h1></header>
+                    <p>Adjust your settings here...</p>`;
+                break;
+
         default:
-            content.innerHTML = "<h1>Dashboard</h1><p>Welcome to your budget dashboard.</p>";
+                content.innerHTML = `<header><h1>Dashboard</h1></header>
+                    <p>Welcome to your dashboard!</p>`;
+                break;
     }
 }
-
-
+   document.querySelectorAll(".nav-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            changePage(this.getAttribute("onclick").replace("changePage('", "").replace("')", ""));
+        });
+    });
     
     //const charttransitionButton = document.getElementById("charttransitionButton"); add flip chart button
-
-
     
     let balance = 500;
     
@@ -73,9 +94,6 @@ function changePage(page) {
         }
     });
 
-    //function updateBalance() {
-     //   balanceElement.textContent = `$${balance}`;
-   // }
 
     new Chart(spendingCtx, {
         type: "line",
@@ -121,4 +139,5 @@ document.getElementById("settingsButton").addEventListener("click", function () 
 }
 
     updateBalance();
+
 });
