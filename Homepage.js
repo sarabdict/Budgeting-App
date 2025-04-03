@@ -9,7 +9,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const spendingCtx2 = document.getElementById("spendingChart2").getContext("2d");
     const savingCtx = document.getElementById("savingChart").getContext("2d");
 
+function changePage(page) {
+    let content = document.getElementById("content");
+
+    // Change content based on clicked button
+    switch (page) {
+        case "dashboard":
+            content.innerHTML = "<h1>Dashboard</h1><p>Welcome to your budget dashboard.</p>";
+            break;
+        case "subscriptions":
+            content.innerHTML = "<h1>Subscriptions</h1><p>Track your monthly subscriptions here.</p>";
+            break;
+        case "saving-goals":
+            content.innerHTML = "<h1>Saving Goals</h1><p>Set and track your saving goals here.</p>";
+            break;
+        case "expense-tracker":
+            content.innerHTML = "<h1>Expense Tracker</h1><p>Log your expenses and see trends.</p>";
+            break;
+        case "accounts":
+            content.innerHTML = "<h1>Accounts</h1><p>Manage your financial accounts.</p>";
+            break;
+        case "settings":
+            content.innerHTML = "<h1>Settings</h1><p>Customize your app settings here.</p>";
+            break;
+        default:
+            content.innerHTML = "<h1>Dashboard</h1><p>Welcome to your budget dashboard.</p>";
+    }
+}
+
+
+    
     //const charttransitionButton = document.getElementById("charttransitionButton"); add flip chart button
+
+
     
     let balance = 500;
     
