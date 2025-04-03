@@ -68,6 +68,31 @@ Show the dropdown menu when the parent is hovered
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.center-content[data-page="dashboard"] {
+    background-color: #f5f5f5;
+}
+
+.center-content[data-page="subscriptions"] {
+    background-color: #ffcccc;
+}
+
+.center-content[data-page="saving-goals"] {
+    background-color: #ccffcc;
+}
+
+.center-content[data-page="expense-tracker"] {
+    background-color: #ccccff;
+}
+
+.center-content[data-page="accounts"] {
+    background-color: #ffcc99;
+}
+
+.center-content[data-page="settings"] {
+    background-color: #ffff99;
 }
 
 .content {
