@@ -30,7 +30,7 @@ Usage
     Use the personalized budgeting tool to set goals and track progress.
     Access the routine tracker to log money inflows and outflows systematically.
     View the net worth summary for a comprehensive snapshot of financial health.
-
+2. Node and npm are installed. 
 
 ## Responsive Design
 
