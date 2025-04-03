@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BudgetApp</title>
     <link rel="stylesheet" href="Homepage.css">
@@ -10,22 +9,25 @@
 </head>
 <body>
     <div class="container">
-        <div class="sidebar">
+        
+        <nav class="sidebar">
           <button id="heartbutton">❤️ Heart</button>
           <button id="settingsButton">⚙️ Settings</button>
-            <nav>
+          <button class="nav-btn" onclick="changePage('dashboard')">Dashboard</button>
+            <button class="nav-btn" onclick="changePage('subscriptions')">Subscriptions</button>
+            <button class="nav-btn" onclick="changePage('saving-goals')">Saving Goals</button>
+            <button class="nav-btn" onclick="changePage('expense-tracker')">Expense Tracker</button>
+            <button class="nav-btn" onclick="changePage('accounts')">Accounts</button>
+            <button class="nav-btn" onclick="changePage('settings')">Settings</button>
+        </nav>
+         <nav>
                 <ul>
-                    <li>Dashboard</li>
-                    <li>Subscriptions</li>
-                    <li>Saving Goals</li>
-                    <li>Expense Tracker</li>
-                    <li>Accounts</li>
-                    <li>Settings</li>
-                    <li>(Enter More or Less);</li>
+                    <li>Stuff Here</li>
+                    <li>Words Here</li>
+                    <li>LALALA</li>
                 </ul>
-            </nav>
+        </nav>
     </div>
-        
         <div class="center-content">
             <div class="content">
             <header>
@@ -46,8 +48,7 @@
                 <ul id="transaction-list"></ul>
             </section>
     </div>
- </div>
-        
+ </div>   
      <div class="right-sidebar">
               <header>
                   <h1>First and Last Name Here</h1>
