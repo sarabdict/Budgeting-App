@@ -1,6 +1,6 @@
 # Budgeting-App
 
-A web-based Budgeting App designed to accommodate specific representation of data and budgeting tools. The app features a personalized budgeting tool, routine tracker of money in and money out, net worth summary, and additional pages soon to be added.
+A web-based Budgeting App built with React, designed to accommodate specific representation of data and budgeting tools. The app features a personalized budgeting tool, routine tracker of money in and money out, net worth summary, and additional pages soon to be added.
 
 ## Features
 
@@ -14,16 +14,15 @@ A web-based Budgeting App designed to accommodate specific representation of dat
 - **HTML**: Provides the structural backbone of the web pages.
 - **CSS**: Handles styling, layout, and responsiveness with media queries.
 - **JavaScript/Python**:Implements interactive features and dynamic functionalities.
+- **React Router**: (For navigation)
 
 ## Installation
 
 To get a local copy up and running follow these simple steps:
 
 1. Clone the repository:
-cd Budgeting-App
-
    ```bash
-   git clone https://github.com/sarabdict/Budgeting-App.git
+git clone https://github.com/sarabdict/Budgeting-App.git
 cd Budgeting-App
 Open the index.html file in your web browser to start using the budgeting app.
 Usage
