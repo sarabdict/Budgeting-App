@@ -134,9 +134,9 @@ document.getElementById("heartButton").addEventListener("click", function () {
     });
 
 document.getElementById("settingsButton").addEventListener("click", function () {
-    alert("Settings menu coming soon! Maybe light & dark mode?");
+    console.log("Settings menu coming soon! Maybe light & dark mode?");
     });
-}
+} //added console.log instead of alert to see what happens 
 
     updateBalance();
 
