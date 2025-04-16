@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saving Goals</title>
+    <link rel="stylesheet" href="Homepage.css">
+</head>
+<body>
+    <div class="container">
+        
+        <nav class="sidebar">
+          <button id="heartbutton">❤️ Heart</button>
+          <button id="settingsButton">⚙️ Settings</button>
+          <button class="nav-btn" onclick="window.location.href='Dashboard.html'">Dashboard</button>
+          <button class="nav-btn" onclick="window.location.href='subscriptions.html'">Subscriptions</button>
+          <button class="nav-btn" onclick="window.location.href='savinggoals.html'">Saving Goals</button>
+          <button class="nav-btn" onclick="window.location.href='expensetracker.html'">Expense Tracker</button>
+          <button class="nav-btn" onclick="window.location.href='accounts.html'">Accounts</button>  
+          <button class="nav-btn" onclick="window.location.href='users.html'">Users</button>  
+               <ul class = "sidebar-list">
+                    <li>Stuff Here</li>
+                    <li>Words Here</li>
+                    <li>LALALA</li>
+                </ul>
+        </nav>
+        
+        <div class="center-content">
+            <div class="content">
+            <header>
+                <h1>Hey There, Gurllll!</h1>
+            </header>
+            <section class="balance-card">
+                <h2>Current Balance</h2>
+                <p class="balance" id="balance">$500</p>
+                <button id="add-income">+ Income</button>
+                <button id="add-expense">- Expense</button>
+            </section>
+            <section class="chart-container">
+                <h2>Spending Overview</h2>
+                <canvas id="spendingChart"></canvas>
+            </section>
+            <section class="transactions">
+                <h2>Recent Transactions</h2>
+                <ul id="transaction-list"></ul>
+            </section>
+    </div>
+ </div>   
+        
+     <div class="right-sidebar">
+              <header>
+                  <h2>First and Last Name Here</h2>
+              </header> 
+              <section class="chart-container">
+                  <h2>Expense Donut</h2>
+                  <canvas id="spendingChart2"></canvas>
+              </section>
+           <section class="chart-container">
+                  <h2>Savings Donut</h2>
+              <canvas id="savingChart"></canvas>
+           </section>
+    </div>
+</div>
+    <script src="homepage.js"></script>
+</body>
+</html>
