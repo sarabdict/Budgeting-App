@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">     <!--add to index -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+      <!-- Navbar - Start -->
+  <div class="container">
+        <nav class="sidebar">
+          <button id="heartbutton">❤️ Heart</button>
+          <button id="settingsButton">⚙️ Settings</button>
+          <button class="nav-btn" onclick="changePage('dashboard')">Dashboard</button>
+          <button class="nav-btn" onclick="changePage('subscriptions')">Subscriptions</button>
+          <button class="nav-btn" onclick="changePage('saving-goals')">Saving Goals</button>
+          <button class="nav-btn" onclick="changePage('expense-tracker')">Expense Tracker</button>      
+          <button class="nav-btn" onclick="changePage('accounts')">Accounts</button>
+          <button class="nav-btn" onclick="changePage('user')">User</button>
+          <ul class = "sidebar-list">
+                    <li>Stuff Here</li>
+                    <li>Words Here</li>
+                    <li>LALALA</li>
+                </ul>
+        </nav>
+       <!-- Navbar - End -->        
+<div class="center-content">
+        <div class="content">
+            <header>
+                <h1>Hey There, Gurllll</h1>
+            </header>
+            <section class="balance-card">
+                <h2>Current Balance</h2>
+                <p class="balance" id="balance">$500</p>
+                <button id="add-income">+ Income</button>
+                <button id="add-expense">- Expense</button>
+            </section>
+            <section class="chart-container">
+                <h2>Spending Overview</h2>
+                <canvas id="spendingChart"></canvas>
+            </section>
+            <section class="transactions">
+                <h2>Recent Transactions</h2>
+                <ul id="transaction-list"></ul>
+            </section>
+         </div>
+ </div>   
+        
+     <div class="right-sidebar">
+              <header>
+                  <h2>First and Last Name Here</h2>
+              </header> 
+              <section class="chart-container">
+                  <h2>Expense Donut</h2>
+                  <canvas id="spendingChart2"></canvas>
+              </section>
+           <section class="chart-container">
+                  <h2>Savings Donut</h2>
+              <canvas id="savingChart"></canvas>
+           </section>
+    </div>
+</div>      
+  <!-- Footer - Start-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Main</a></li>
+                <li><a href="Dashboard.html">Dashboard</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+                <li><a href="saving-goals.html">Saving Goals</a></li>
+                <li><a href="expense-tracker.html">Expense Tracker</a></li>
+                <li><a href="User.html">Accounts</a></li>
+                <li><a href="User.html">User</a></li>
+            </ul>
+        </nav>
+        <!-- Footer - End -->
+</body>
+
+</html>
