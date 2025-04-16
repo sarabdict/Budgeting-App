@@ -45,6 +45,10 @@ function changePage(page) {
                 content.innerHTML = `<header><h1>Accounts</h1></header>
                     <p>Manage your accounts here...</p>`;
                 break;
+        case "users":
+                content.innerHTML = `<header><h1>Users</h1></header>
+                    <p>Manage your users here...</p>`;
+                break;          
         case "settings":
                content.innerHTML = `<header><h1>Settings</h1></header>
                     <p>Adjust your settings here...</p>`;
@@ -109,7 +113,7 @@ function changePage(page) {
         }
     });
         new Chart(spendingCtx2, {
-        type: "doughnut",
+        type: "dounut",
         data: {
             labels: ["Rent", "Gas"],
             datasets: [{
@@ -119,7 +123,7 @@ function changePage(page) {
         }
     });
         new Chart(savingCtx, {
-        type: "doughnut",
+        type: "donut",
         data: {
             labels: ["Saved", "Spent"],
             datasets: [{
