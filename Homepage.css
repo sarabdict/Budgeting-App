@@ -52,7 +52,7 @@ Show the dropdown menu when the parent is hovered
 .sidebar {
     width: 20%;
     max-width: 300px;
-    background: grey;
+    background: light purple;
     color: white;
     padding: 20px;
     height: 100vh;
@@ -104,15 +104,15 @@ Show the dropdown menu when the parent is hovered
 .right-sidebar {
     width: 20%;
     max-width: 300px;
-    background: lightgrey;
+    background: light purple;
     padding: 20px;
     height: 100vh;
-    border-left: 1px solid black;
+    border-left: 0px solid black;
     text-align: center;
 }
 
 .balance-card {
-    background: white;
+    background: light grey;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -125,7 +125,7 @@ Show the dropdown menu when the parent is hovered
 }
 
 .chart-container {
-    background: white;
+    background: light grey;
     padding: 20px;
     margin-top: 20px;
     border-radius: 8px;
@@ -133,7 +133,7 @@ Show the dropdown menu when the parent is hovered
 }
 
 .transactions {
-    background: white;
+    background: light grey;
     padding: 20px;
     margin-top: 20px;
     border-radius: 8px;
@@ -151,7 +151,7 @@ button {
 }
 
 button:hover {
-    background: #218838;
+    background: white;
 }
 
 
