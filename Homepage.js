@@ -45,8 +45,8 @@ function changePage(page) {
                 content.innerHTML = `<header><h1>Accounts</h1></header>
                     <p>Manage your accounts here...</p>`;
                 break;
-        case "users":
-                content.innerHTML = `<header><h1>Users</h1></header>
+        case "user":
+                content.innerHTML = `<header><h1>User</h1></header>
                     <p>Manage your users here...</p>`;
                 break;          
         case "settings":
