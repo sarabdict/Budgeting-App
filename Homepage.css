@@ -1,10 +1,10 @@
 body {
-    font-family: 'Noto Sans', sans-serif;
-    color: black;
-    font-size: 24px;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #1c1c1c;
+    font-size: 18px;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: #fafafa;
     display: flex;
     flex-direction: column;
     height: 100vh;
