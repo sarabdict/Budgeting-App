@@ -151,7 +151,8 @@ button {
 }
 
 button:hover {
-    background: white;
+    background: grey;
+    color: black;
 }
 
 
