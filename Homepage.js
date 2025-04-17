@@ -60,6 +60,17 @@ function changePage(page) {
                 break;
     }
 }
+document.querySelector('.dropdown-toggle').addEventListener('click', function () {
+  document.querySelector('.dropdown-wrapper').classList.toggle('show');
+});
+
+// Optional: Close dropdown on outside click
+window.addEventListener('click', function(e) {
+  const dropdown = document.querySelector('.dropdown-wrapper');
+  if (!dropdown.contains(e.target)) {
+    dropdown.classList.remove('show');
+  }
+});
    document.querySelectorAll(".nav-btn").forEach(button => {
         button.addEventListener("click", function () {
             changePage(this.getAttribute("onclick").replace("changePage('", "").replace("')", ""));
