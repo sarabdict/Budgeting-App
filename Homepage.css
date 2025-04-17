@@ -104,7 +104,7 @@ Show the dropdown menu when the parent is hovered
 .right-sidebar {
     width: 20%;
     max-width: 300px;
-    background: light purple;
+    background: #b19cd9;
     padding: 20px;
     height: 100vh;
     border-left: 0px solid black;
