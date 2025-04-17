@@ -66,6 +66,7 @@ function changePage(page) {
         });
     });
     
+    
     //const charttransitionButton = document.getElementById("charttransitionButton"); add flip chart button
     
     let balance = 500;
@@ -113,32 +114,34 @@ function changePage(page) {
         }
     });
         new Chart(spendingCtx2, {
-        type: "dounut",
+        type: "doughnut",
         data: {
             labels: ["Rent", "Gas"],
             datasets: [{
                 data: [30, 70],
-                backgroundColor: "rgba(75, 192)"
+                backgroundColor: "rgba(75, 192, 192, 1)"
             }]
         }
     });
         new Chart(savingCtx, {
-        type: "donut",
+        type: "doughnut",
         data: {
             labels: ["Saved", "Spent"],
             datasets: [{
                 data: [30, 70],
-                backgroundColor: "rgba(75, 192)"
+                backgroundColor: "rgba(75, 192, 192, 1)"
             }]
         }
     });
-    
-document.getElementById("heartButton").addEventListener("click", function () {
-    alert("Hi luv 💖");
+if (heartButton) {
+    heartButton.addEventListener("click", function () {
+        alert("Hi luv 💖");
     });
+}
 
-document.getElementById("settingsButton").addEventListener("click", function () {
-    console.log("Settings menu coming soon! Maybe light & dark mode?");
+if (settingsButton) {
+    settingsButton.addEventListener("click", function () {
+        console.log("Settings menu coming soon! Maybe light & dark mode?");
     });
 } //added console.log instead of alert to see what happens 
 
